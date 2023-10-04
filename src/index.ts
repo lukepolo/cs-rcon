@@ -27,18 +27,7 @@ const rl = readline.createInterface({
 rcon
   .connect()
   .then(async () => {
-    console.log("Connected to CS:GO server via RCON");
-
-    // Watch the CS:GO log file for changes
-    const logTail = new Tail("cs2.log");
-    logTail.on("line", (data: string) => {
-      // Handle log data here, you can send it to the RCON or perform any other actions.
-      console.log(data);
-    });
-
-    logTail.on("error", (error: Error) => {
-      console.error("Error watching log file:", error);
-    });
+    console.log("Connected to CS server via RCON");
 
     function getUserInput() {
       rl.question("", async (input) => {
