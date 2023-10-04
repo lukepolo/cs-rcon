@@ -1,0 +1,10 @@
+[
+  {
+    "watch": ["src"],
+    "exec": "node index.js"
+  },
+  {
+    "watch": ["index.js"],
+    "exec": "node index.js"
+  }
+]
