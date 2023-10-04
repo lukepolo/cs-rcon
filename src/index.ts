@@ -1,4 +1,3 @@
-import { Tail } from "tail";
 import dotenv from "dotenv";
 import readline from "readline";
 import { Rcon } from "rcon-client";
