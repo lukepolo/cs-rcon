@@ -39,8 +39,14 @@ rcon
     getUserInput();
   })
   .catch((error: Error) => {
-    console.error("Failed to connect to RCON:", error);
+    console.error("   Failed to connect to RCON:", error.message);
+    process.exit(0);
   });
+
+rcon.on("error", (error) => {
+  console.info("RCON ERROR", error)
+  process.exit(0);
+})
 
 process.on("SIGINT", () => {
   rcon.end();
